@@ -1,0 +1,119 @@
+/* ----------- COLOR PALETTE ----------- */
+:root {
+    --baby-blue: #7cc8ff;
+    --soft-pink: #ffb6d5;
+    --hot-pink: #ff5fa2;
+    --text-dark: #1f1f1f;
+    --text-light: #4f4f4f;
+    --white: #ffffff;
+    --border-light: #6fb8ff;
+}
+
+/* ----------- GLOBAL RESET ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: var(--soft-pink);
+    color: var(--text-dark);
+}
+
+/* ----------- NAVBAR ----------- */
+.brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.6px;
+}
+
+.nav-right a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+/* Soft neon glow on hover */
+.nav-right a:hover {
+    color: #ffffff;
+    text-shadow:
+        0 0 6px rgba(255, 95, 162, 0.9),
+        0 0 12px rgba(255, 95, 162, 0.7),
+        0 0 18px rgba(124, 200, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+/* underline animation */
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff5fa2, #7cc8ff);
+    transition: width 0.25s ease;
+}
+
+.nav-right a:hover::after {
+    width: 100%;
+}
+
+/* ----------- MAIN CONTENT ----------- */
+.content {
+    width: 100%;
+    height: 65vh;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+/* ----------- FOOTER ----------- */
+.footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px 50px;
+
+    background: linear-gradient(135deg, #cfe9ff, #eaf4ff);
+    border-radius: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-left p,
+.footer-right p {
+    color: #555;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+/* Subtle divider for balance */
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.05);
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}

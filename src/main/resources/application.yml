@@ -1,0 +1,5 @@
+okta:
+  oauth2:
+    issuer: https://dev-45dax8jis7sj4fom.us.auth0.com/
+    client-id: DqbZUTK7gPpB0yvkYX27J7U7Lvpge5P4
+    client-secret: ZrtiM-DuoxdVlw_l1reo4CA1cszos76r1atlUqvzoZmOHQwUsman0P01wPnCwJr9
